@@ -19,12 +19,6 @@ from test import classes_by_major, classes_by_dep_course_level, classes_by_dep_c
 load_dotenv()
 TOKEN = os.getenv('TOKEN')
 
-subscriptionKey = '574acb6b-b948-4ae8-99aa-2e5e34f20017'
-host = 'api.bing.microsoft.com'
-path = '/v7.0/entities'
-endpoint = "https://management.azure.com/"+"/bing/v7.0/search"
-mkt = 'en-US'
-
 client = discord.Client()
 
 @client.event
