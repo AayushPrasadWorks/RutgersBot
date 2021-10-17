@@ -67,6 +67,7 @@ async def on_message(message):
 
             if conform.content == 'no':
                 print("Successfull")
+                await message.channel.send('Here are your filtered Courses')
                 list = classes_by_major(major.content.upper())
                 for course in list:
                   await message.channel.send(course)
@@ -90,7 +91,7 @@ async def on_message(message):
                      return 0
 
                    number = await client.wait_for('message', check=ck)
-
+                   await message.channel.send('Here are your filtered Courses')
                    list = classes_by_dep_course_level(major.content.upper(), number.content)
                    print(list)
                    for course in list:
@@ -107,6 +108,7 @@ async def on_message(message):
                      return 0
 
                     number = await client.wait_for('message', check=ck)
+                    await message.channel.send('Here are your filtered Courses')
                     list = classes_by_dep_course_level(major.content.upper(), number.content)
                     for course in list:
                       await message.channel.send(course)
